@@ -1,0 +1,47 @@
+[
+    {
+        "nama" : "Fathir Ramadhano Noerman",
+        "umur" : 20,
+        "nim" : "2217020153",
+        "lulus" : true,
+        "hobby" : [
+            "coding",
+            "gaming",
+            "music"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Haditya Prasetyo",
+            "pembimbing 2" : "Muhammad Teguh Brillian"
+        }
+    },
+    {
+        "nama" : "Silvani Auralia Noerman",
+        "umur" : 18,
+        "nim" : "2617020013",
+        "lulus" : false,
+        "hobby" : [
+            "reading",
+            "watching",
+            "dance"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Ozzy Secio Riza",
+            "pembimbing 2" : "M. Yusuf"
+        }
+    },
+    {
+        "nama" : "Fadhila Auralia Noerman",
+        "umur" : 16,
+        "nim" : "2917020022",
+        "lulus" : false,
+        "hobby" : [
+            "learning",
+            "watching",
+            "singing"
+        ],
+        "pembimbing" : {
+            "pembimbing 1" : "Mustika Sukma Utari",
+            "pembimbing 2" : "Raju Wandira"
+        }
+    }
+]
