@@ -26,7 +26,7 @@ $menu =$menu["menu"];
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">All Menu</a>
         </div>
         </div>
     </div>
