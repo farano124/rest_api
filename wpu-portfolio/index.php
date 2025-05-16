@@ -22,6 +22,10 @@ $urlLatestVideo = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCJ7RSk
 $result = get_Curl($urlLatestVideo);
 $latestVideoId = $result['items'][0]['id']['videoId'];
 
+//instagram API
+$clientID = "1277256363821289";
+$accessToken = "IGAASJqGvaSOlBZAE9qR2VzX3hKZATk3VFRWVm9wbmdqOTlUalNuUW4zT2JLOXVQUlcxTG5DdEVhek9hV2Q1cUxMRmZA0a21HLXhfVHRkSllHMzBXWE5TbHNualpnOXRPc3JINGpoQVFWYmxzcEVxMmZAyc1lEV2ZAyWTY3a0I4N3JYOAZDZD";
+
 
 
 ?>
