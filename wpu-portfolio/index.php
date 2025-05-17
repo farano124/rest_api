@@ -24,7 +24,27 @@ $latestVideoId = $result['items'][0]['id']['videoId'];
 
 //instagram API
 $clientID = "1277256363821289";
-$accessToken = "IGAASJqGvaSOlBZAE9qR2VzX3hKZATk3VFRWVm9wbmdqOTlUalNuUW4zT2JLOXVQUlcxTG5DdEVhek9hV2Q1cUxMRmZA0a21HLXhfVHRkSllHMzBXWE5TbHNualpnOXRPc3JINGpoQVFWYmxzcEVxMmZAyc1lEV2ZAyWTY3a0I4N3JYOAZDZD";
+$accessToken = "IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD";
+
+$result2 = get_Curl("https://graph.instagram.com/v22.0/me?fields=username,profile_picture_url,followers_count&access_token=IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD");
+
+$usernameIG = $result2['username'];
+$profilePictureIG = $result2['profile_picture_url'];
+$followersIG = $result2['followers_count'];
+
+//media IG
+$resultGambar1 = get_Curl("https://graph.instagram.com/v22.0/18029276387448609?fields=media_url&access_token=IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD");
+$resultGambar2 = get_Curl("https://graph.instagram.com/v22.0/18046106128126227?fields=media_url&access_token=IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD");
+$resultGambar3 = get_Curl("https://graph.instagram.com/v22.0/18069013345001390?fields=media_url&access_token=IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD");
+$resultGambar4 = get_Curl("https://graph.instagram.com/v22.0/17885771581344814?fields=media_url&access_token=IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD");
+$resultGambar5 = get_Curl("https://graph.instagram.com/v22.0/18051016933118137?fields=media_url&access_token=IGAASJqGvaSOlBZAE1WY1hWT0VseUpIN1pmeWxQLXpnYVpFaWx6S1BnSUdQQklZAbUFvRWhYRVRUa2xJREh3c201ZA0lCZAE96b2ZAmeXNUTGZAzUFpEOENVd012T0tfUFNyUHhFcXRKSV80UkR3TW94VUt6d0ZAYQ19UZAndJbFJsX0RXZAwZDZD");
+
+
+$gambar1 = $resultGambar1['media_url'];
+$gambar2 = $resultGambar2['media_url'];
+$gambar3 = $resultGambar3['media_url'];
+$gambar4 = $resultGambar4['media_url'];
+$gambar5 = $resultGambar5['media_url'];
 
 
 
@@ -113,7 +133,7 @@ $accessToken = "IGAASJqGvaSOlBZAE9qR2VzX3hKZATk3VFRWVm9wbmdqOTlUalNuUW4zT2JLOXVQ
           <div class="col-md-5">
             <div class="row">
               <div class="col md-4">
-                <img src="<?= $youtubeProfilePic; ?>" width="100" class="rounded-circle-img-thumbnail">
+                <img src="<?= $youtubeProfilePic; ?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
                 <h5><?= $channelName; ?></h5>
@@ -132,24 +152,30 @@ $accessToken = "IGAASJqGvaSOlBZAE9qR2VzX3hKZATk3VFRWVm9wbmdqOTlUalNuUW4zT2JLOXVQ
           <div class="col-md-5">
             <div class="row">
               <div class="col md-4">
-                <img src="img/profile1.png" width="100" class="rounded-circle-img-thumbnail">
+                <img src="<?= $profilePictureIG; ?>" width="200" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
-                <h5>SandhikaGalih</h5>
-                <p>70000 Followers.</p>
+                <h5><?= $usernameIG ?></h5>
+                <p><?= $followersIG ?> Followers.</p>
               </div>
             </div>
 
             <div class="row mt-3 pb-3">
               <div class="col">
                 <div class="ig-thumbnail">
-                  <img src="img/thumbs/1.png">
+                  <img src="<?= $gambar1; ?>">
                 </div>
                 <div class="ig-thumbnail">
-                  <img src="img/thumbs/2.png">
+                  <img src="<?= $gambar2; ?>">
                 </div>
                 <div class="ig-thumbnail">
-                  <img src="img/thumbs/3.png">
+                  <img src="<?= $gambar3; ?>">
+                </div>
+                <div class="ig-thumbnail">
+                  <img src="<?= $gambar4; ?>">
+                </div>
+                <div class="ig-thumbnail">
+                  <img src="<?= $gambar5; ?>">
                 </div>
               </div>
             </div>
