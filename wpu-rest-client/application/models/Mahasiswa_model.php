@@ -90,13 +90,4 @@ class Mahasiswa_model extends CI_model {
         return $result;
     }
 
-    public function cariDataMahasiswa()
-    {
-        $keyword = $this->input->post('keyword', true);
-        $this->db->like('nama', $keyword);
-        $this->db->or_like('jurusan', $keyword);
-        $this->db->or_like('nrp', $keyword);
-        $this->db->or_like('email', $keyword);
-        return $this->db->get('mahasiswa')->result_array();
-    }
 }
